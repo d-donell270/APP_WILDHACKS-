@@ -1,36 +1,37 @@
-import React, { useState } from 'react';
-import './Search.css';
+import React from 'react';
+import './Services.css'; // Make sure to create this CSS file in the same directory
 
-const BiXDiamondFillicon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="search-icon" viewBox="0 0 16 16">
-        <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046 .435 6.951c-.58.58-.58 1.519 0 2.098z" />
-    </svg>
-);
-
-function SearchPage() {
-    const [searchQuery, setSearchQuery] = useState('');
-
-    const handleSearch = (event) => {
-        event.preventDefault();
-        console.log(searchQuery); // Replace with your actual search function
-    };
-
+function Services() {
     return (
-        <div className="search-page">
-            <div className="search-container">
-                <h1>Find What You Need</h1>
-                <form onSubmit={handleSearch} className="search-form">
-                    <input
-                        type="text"
-                        placeholder="Search..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                    />
-                    <button type="submit"><BiXDiamondFillicon /></button>
-                </form>
-            </div>
+        <div className="services-container">
+            <h1>Our Services</h1>
+            <p>Discover how Resourceful leverages AI to transform the way you access information.</p>
+
+            <section className="service-detail">
+                <h2>Intelligent Prompt Analysis</h2>
+                <p>Our platform uses advanced AI to analyze your prompts or uploaded PDFs, identifying key words, topics, and subtopics to tailor your search.</p>
+            </section>
+
+            <section className="service-detail">
+                <h2>Comprehensive Search</h2>
+                <p>By breaking down your request, our system conducts thorough searches across Google Scholar and YouTube, ensuring you receive the most relevant academic papers and educational videos.</p>
+            </section>
+
+            <section className="service-detail">
+                <h2>Organized Results</h2>
+                <p>Results are meticulously organized by topics and subtopics, making it easy to navigate through the wealth of information and find exactly what you need.</p>
+            </section>
+
+            <section className="how-to-use">
+                <h2>How to Use Resourceful</h2>
+                <ol>
+                    <li>Navigate to the search page to type in your prompt or choose to upload a PDF for analysis.</li>
+                    <li>Hit 'Search' to initiate the AI-driven discovery process.</li>
+                    <li>Explore the categorized results, sorted by topics and subtopics for your convenience.</li>
+                </ol>
+            </section>
         </div>
     );
 }
 
-export default SearchPage;
+export default Services;
