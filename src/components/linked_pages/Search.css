@@ -1,0 +1,23 @@
+/* SearchPage.css */
+.search-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.search-container {
+    text-align: center;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+/* UploadPage.css */
+.upload-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.upload-container {
+    text-align: center;
+}
+
+.upload-container input[type="file"] {
+    display: block;
+    margin: 20px auto;
+}
+
+.upload-container button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
