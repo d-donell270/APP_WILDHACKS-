@@ -1,0 +1,30 @@
+.help-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.help-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.faq-section {
+    margin-top: 20px;
+}
+
+.faq-section h2 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.faq-section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.faq-section p strong {
+    display: block;
+    /* Make the questions stand out */
+    color: #000;
+}

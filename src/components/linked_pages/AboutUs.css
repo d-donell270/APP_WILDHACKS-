@@ -1,0 +1,39 @@
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-us-container h1,
+.about-us-container h2 {
+    color: #2a2a2a;
+    /* Dark text for headings */
+    text-align: center;
+}
+
+.about-us-container p {
+    color: #4a4a4a;
+    /* Slightly lighter text for paragraphs */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.team-section {
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: #f0f0f0;
+    /* Light background for team member sections */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    color: #2a2a2a;
+}
+
+.team-member p {
+    color: #4a4a4a;
+}

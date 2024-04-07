@@ -1,4 +1,3 @@
-/* UploadPage.css */
 .upload-page {
     display: flex;
     justify-content: center;
@@ -10,12 +9,37 @@
     text-align: center;
 }
 
+.upload-box {
+    background-color: #f2f2f2;
+    /* Light grey background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    margin-bottom: 20px;
+    /* Space between upload box and preview */
+}
+
 .upload-container input[type="file"] {
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
+    /* Center and add space around input */
 }
 
 .upload-container button {
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
+    /* Slightly rounded corners for the button */
+    border: 1px solid #ccc;
+    /* Light grey border */
+    background-color: #fff;
+    /* White background */
+}
+
+.preview-container {
+    padding: 10px;
+    background-color: #e9e9e9;
+    /* Slightly darker grey for contrast */
+    border-radius: 5px;
 }
