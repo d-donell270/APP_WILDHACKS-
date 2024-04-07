@@ -8,13 +8,127 @@ video {
 
 
 .hero-container {
-    /* image background if not video */
-    /* background: url('') center center/cover no-repeat;*/
-    height: 100%;
+    position: relative;
+    height: 100vh;
+    /* Adjust based on desired height */
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
-    object-fit: contain;
+    overflow: hidden;
+    /* Prevents any overflow from the video */
 }
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the container without losing aspect ratio */
+    z-index: -1;
+    /* Ensure it stays in the background */
+}
+
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: -100px;
+    position: absolute;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-0.25px, -0.5px) rotate(-00.5rem);
+    }
+
+    20% {
+        transform: translate(-0.75px, 0px) rotate(0.25deg);
+    }
+
+    30% {
+        transform: translate(0.75px, 0.5px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(0.25px, -0.25px) rotate(0.25deg);
+    }
+
+    50% {
+        transform: translate(-0.25px, 0.5px) rotate(-0.5deg);
+    }
+
+    60% {
+        transform: translate(-0.75px, 0.25px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(0.75px, 0.25px) rotate(-0.25deg);
+    }
+
+    80% {
+        transform: translate(-0.25px, -0.25px) rotate(0.25deg);
+    }
+
+    90% {
+        transform: translate(0.25px, 0.5px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0.25px, -0.5px) rotate(-1deg);
+    }
+}
+
+.hero-btns .btn {
+    /* Add this to your existing button styles */
+    animation: shake 0.8s;
+    /* Adjust time as needed */
+    animation-iteration-count: infinite;
+    margin-top: 00px;
+    padding: 12px 50px;
+    width: 400px;
+}
+
+.hero-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* This will align the buttons to the center */
+    gap: 10px;
+    margin-top: 350px;
+    /* Adjust the space between the buttons */
+}
+
+.hero-container > p {
+    color: #fff;
+    font-size: 32px;
+    margin-top: 50px;
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans' 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+}
+
+@media screen and (max-width: 900px) {
+    .hero-container>h1 {
+            font-size: 70px;
+            /* Adjusted from 100px for smaller screens */
+        }
+    
+        .hero-container>p {
+            font-size: 24px;
+            margin-top: -10px;
+            /* Adjusted from 32px for smaller screens */
+        }
+}
+
+@media screen and (max-width: 680px) {
+    .hero-container>h1 {
+        font-size: 50px;
+        /* Adjusted from 100px for smaller screens */
+    }}

@@ -34,9 +34,18 @@
     font-size: 20px;
 }
 
-.btn--medium:hover,
-.btn--large:hover {
-    background: #fff;
+.btn--primary:hover {
+    background-color: var(--secondary);
+    /* Invert background color */
+    color: var(--primary);
+    /* Invert text color */
+    transition: all 0.3s ease-out;
+}
+
+.btn--outline:hover {
+    background-color: var(--primary);
+    /* Use primary color for background */
     color: #242424;
+    /* Use secondary color for text */
     transition: all 0.3s ease-out;
 }

@@ -2,26 +2,23 @@ import React from 'react';
 import './Background.css';
 import '../App.css'
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
 
 function Background() {
     return (
         <div className='hero-container'>
-            <video src="/4884234-uhd_3840_2160_30fps.mp4" autoPlay loop muted />
+            <div className="hero-video">
+                <video src="video/312video_background.mp4" autoPlay loop muted />
+            </div>
             <h1>AI-Powered Learning</h1>
             <p>Unleash Insights, Ignite Curiosity!!!</p>
             <div className="hero-btns">
-                <Link to="/Search">
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
+                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' path="/Search">
                         Search...
                     </Button>
-                </Link>
-                <Link to="/Upload">
-                    <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>
-                        Upload PDF
+                <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large' path="/Upload">
+                    Upload PDF <i className="fas fa-file-pdf" />
                     </Button>
-                </Link>
-
+                    
             </div>
         </div>
     )

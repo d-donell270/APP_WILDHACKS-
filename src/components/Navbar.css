@@ -12,10 +12,12 @@
 
 .navbar-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 80px;
-    max-width: 1500px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .navbar-logo {
@@ -27,21 +29,53 @@
     font-size: 2rem;
     display: flex;
     align-items: center;
+    flex-grow: 1;
+}
+
+.navbar-logo .logo-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    gap: 5px;
+    /* Optional: Adjust the space between the icon and text */
+}
+
+.logo-text {
+    display: flex;
+    /* Ensure the span is treated as a block-level element */
+    text-align: center;
+    font-size: 70%;
+    /* Center the text */
+    /* Additional styling for the text */
 }
 
 .navbar-logo-icon {
-    margin-left: 8px;
+    margin-right: 2px;
 }
-
+/*
 .nav-menu {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
+    grid-gap: 5px;
     list-style: none;
     text-align: center;
     width: 60vw;
     justify-content: top;
     margin-right: 2rem;
+}
+*/
+.nav-menu {
+    display: flex;
+    justify-content: flex-start;
+    /* Align items to the right */
+    gap: 20px;
+    /* Spacing between each link */
+    list-style: none;
+    text-align: center;
+    margin-left: auto;
+    /* This pushes the nav-menu to the right */
 }
 
 .nav-item {
@@ -118,6 +152,12 @@
         left: 0;
         transform: translate(25%, 50%);
     }
+    
+    .navbar-logo .logo-container {
+        flex-direction: row;
+        /* Items are laid out horizontally */
+    }
+
 
     .menu-icon {
         display: block;
